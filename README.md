@@ -28,18 +28,29 @@ This project involves:
 ### Codes Used
 
 ``` SQL
---Total number of customers by region--
+--retrieve the total number of customers from each region--
 
 SELECT COUNT(CustomerID), Region
 FROM customerdata
 GROUP BY Region;
 
---Most popular subscription type--
+--find the most popular subscription type by the number of customers--
 SELECT COUNT(CustomerID) AS Customer_count, SubscriptionType
 FROM customerdata
 GROUP BY SubscriptionType
 ORDER BY Customer_count DESC
 LIMIT 1;
 
+--find customers who canceled their subscription within 6 months.--
 
+SELECT 
+    CustomerID, 
+    SubscriptionStart, 
+    SubscriptionEnd,
+    TIMESTAMPDIFF(day, SubscriptionStart, SubscriptionEnd) AS Duration_in_days
+FROM 
+    customerdata
+WHERE 
+   SubscriptionEnd IS NOT NULL
+    AND TIMESTAMPDIFF(day, SubscriptionStart, SubscriptionEnd) <= 180;
 ```
