@@ -26,3 +26,12 @@ This project involves:
 ![Average sub](https://github.com/user-attachments/assets/d362c710-4608-48d8-bf5c-9125264781bb)
 
 ### Codes Used
+
+``` SQL
+--Total number of customers by region--
+
+SELECT COUNT(CustomerID), Region
+FROM customerdata
+GROUP BY Region;
+
+```
