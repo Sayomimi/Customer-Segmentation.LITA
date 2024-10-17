@@ -14,3 +14,15 @@ This project involves:
 - Excel: Initial data analysis and summary reporting through PivotTables.
 - SQL: Querying the dataset to extract insights from the subscription database.
 - Power BI: Visualizing the data and creating an interactive dashboard.
+
+### Pivot Table
+
+![Regional Distribution](https://github.com/user-attachments/assets/597ed73a-dacf-4c6c-87a2-fbece9bdfbaf)
+
+![Popular sub](https://github.com/user-attachments/assets/813d52af-80cc-41a8-aa4f-c1b0856c362d)
+
+![Monthly Revenue](https://github.com/user-attachments/assets/c085ab9c-59cc-45fd-89c9-b363350845f2)
+
+![Average sub](https://github.com/user-attachments/assets/d362c710-4608-48d8-bf5c-9125264781bb)
+
+### Codes Used
