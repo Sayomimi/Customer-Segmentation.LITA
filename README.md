@@ -34,4 +34,12 @@ SELECT COUNT(CustomerID), Region
 FROM customerdata
 GROUP BY Region;
 
+--Most popular subscription type--
+SELECT COUNT(CustomerID) AS Customer_count, SubscriptionType
+FROM customerdata
+GROUP BY SubscriptionType
+ORDER BY Customer_count DESC
+LIMIT 1;
+
+
 ```
