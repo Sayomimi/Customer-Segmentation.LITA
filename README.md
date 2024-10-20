@@ -30,15 +30,24 @@ This project involves:
 ``` SQL
 --retrieve the total number of customers from each region--
 
-SELECT COUNT(CustomerID), Region
-FROM customerdata
-GROUP BY Region;
+SELECT
+      COUNT(CustomerID),
+      Region
+FROM
+      customerdata
+GROUP BY
+      Region;
 
 --find the most popular subscription type by the number of customers--
-SELECT COUNT(CustomerID) AS Customer_count, SubscriptionType
-FROM customerdata
-GROUP BY SubscriptionType
-ORDER BY Customer_count DESC
+SELECT
+     COUNT(CustomerID) AS Customer_count,
+     SubscriptionType
+FROM
+     customerdata
+GROUP BY
+     SubscriptionType
+ORDER BY
+     Customer_count DESC
 LIMIT 1;
 
 --find customers who canceled their subscription within 6 months.--
@@ -73,11 +82,17 @@ GROUP BY
 
 --find the top 3 regions by subscription cancellations.--
 
- SELECT Region, COUNT(Canceled) AS Canceled_Subscription
-    FROM customerdata
-    WHERE Canceled LIKE '%TRUE%'
-    GROUP BY Region
-    ORDER BY Canceled_Subscription  DESC
+SELECT
+    Region,
+    COUNT(Canceled) AS Canceled_Subscription
+FROM
+    customerdata
+WHERE
+    Canceled LIKE '%TRUE%'
+GROUP BY
+    Region
+ORDER BY
+    Canceled_Subscription  DESC
     LIMIT 3;
 
 
