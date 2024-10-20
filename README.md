@@ -62,10 +62,31 @@ WHERE
 
 --calculate total revenue by subscription type.--
 
+SELECT 
+    SubscriptionType, 
+    SUM(Revenue) AS Total_revenue
+FROM 
+    customerdata
+GROUP BY 
+    SubscriptionType;
+
 
 --find the top 3 regions by subscription cancellations.--
 
+ SELECT Region, COUNT(Canceled) AS Canceled_Subscription
+    FROM customerdata
+    WHERE Canceled LIKE '%TRUE%'
+    GROUP BY Region
+    ORDER BY Canceled_Subscription  DESC
+    LIMIT 3;
+
+
 
 --find the total number of active and canceled subscriptions.--
+
+SELECT 
+    COUNT(CASE WHEN Canceled = 'TRUE' THEN 1 END) AS Active_subscriptions,
+    COUNT(CASE WHEN Canceled = 'FALSE' THEN 1 END) AS Canceled_subscriptions
+FROM customerdata;
 
 ```
