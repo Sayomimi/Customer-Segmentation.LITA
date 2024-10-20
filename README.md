@@ -53,4 +53,19 @@ FROM
 WHERE 
    SubscriptionEnd IS NOT NULL
     AND TIMESTAMPDIFF(day, SubscriptionStart, SubscriptionEnd) <= 180;
+
+--calculate the average subscription duration for all customers.--
+
+
+--find customers with subscriptions longer than 12 months.--
+
+
+--calculate total revenue by subscription type.--
+
+
+--find the top 3 regions by subscription cancellations.--
+
+
+--find the total number of active and canceled subscriptions.--
+
 ```
