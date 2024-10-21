@@ -16,14 +16,15 @@ This project involves:
 - Power BI: Visualizing the data and creating an interactive dashboard.
 
 ### Pivot Table
+![Active customers](https://github.com/user-attachments/assets/13d83a43-14f3-475d-9275-02479308f925)
 
-![Regional Distribution](https://github.com/user-attachments/assets/597ed73a-dacf-4c6c-87a2-fbece9bdfbaf)
+![Canceled subscription](https://github.com/user-attachments/assets/475a1e47-95a9-4f1a-95e4-9ec64aa0beef)
 
-![Popular sub](https://github.com/user-attachments/assets/813d52af-80cc-41a8-aa4f-c1b0856c362d)
+![Popular sub](https://github.com/user-attachments/assets/a056b4e9-86d8-40ad-8653-5b841b3425cc)
 
-![Monthly Revenue](https://github.com/user-attachments/assets/c085ab9c-59cc-45fd-89c9-b363350845f2)
+![Total revenue by region](https://github.com/user-attachments/assets/516dc4bf-c28f-4bf9-bf2c-ad21a5004ad6)
 
-![Average sub](https://github.com/user-attachments/assets/d362c710-4608-48d8-bf5c-9125264781bb)
+![Monthly revenue](https://github.com/user-attachments/assets/f633fe5e-1cba-4b7f-a390-cd79c49b563c)
 
 ### Codes Used
 
