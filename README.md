@@ -50,18 +50,26 @@ ORDER BY
      Customer_count DESC
 LIMIT 1;
 
+
 --find customers who canceled their subscription within 6 months.--
 
 SELECT 
     CustomerID, 
+    CustomerName, 
     SubscriptionStart, 
     SubscriptionEnd,
-    TIMESTAMPDIFF(day, SubscriptionStart, SubscriptionEnd) AS Duration_in_days
+    DATEDIFF(STR_TO_DATE(SubscriptionEnd, '%c/%e/%Y'), 
+             STR_TO_DATE(SubscriptionStart, '%c/%e/%Y')) AS Subscription_duration_days
 FROM 
     customerdata
 WHERE 
-   SubscriptionEnd IS NOT NULL
-    AND TIMESTAMPDIFF(day, SubscriptionStart, SubscriptionEnd) <= 180;
+    Canceled = 'TRUE'  -- Only include customers who canceled--
+    AND DATEDIFF(STR_TO_DATE(SubscriptionEnd, '%c/%e/%Y'), 
+                 STR_TO_DATE(SubscriptionStart, '%c/%e/%Y')) <= 180  -- Within 6 months--
+    AND SubscriptionStart IS NOT NULL
+    AND SubscriptionEnd IS NOT NULL;
+
+
 
 --calculate the average subscription duration for all customers.--
 
@@ -78,7 +86,20 @@ WHERE
     AND SubscriptionEnd IS NOT NULL
     GROUP BY CustomerID;
 
+
 --find customers with subscriptions longer than 12 months.--
+SELECT 
+    DISTINCT CustomerID, 
+    CustomerName, 
+    DATEDIFF(STR_TO_DATE(SubscriptionEnd, '%c/%e/%Y'), 
+            STR_TO_DATE(SubscriptionStart, '%c/%e/%Y')) AS subscription_duration_days
+FROM 
+    customerdata
+WHERE 
+    DATEDIFF(STR_TO_DATE(SubscriptionEnd, '%c/%e/%Y'), 
+            STR_TO_DATE(SubscriptionStart, '%c/%e/%Y')) > 365
+    AND SubscriptionStart IS NOT NULL
+    AND SubscriptionEnd IS NOT NULL;
 
 
 --calculate total revenue by subscription type.--
