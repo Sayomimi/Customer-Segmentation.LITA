@@ -65,6 +65,18 @@ WHERE
 
 --calculate the average subscription duration for all customers.--
 
+SELECT 
+	CustomerID,
+    AVG(DATEDIFF(
+        STR_TO_DATE(SubscriptionEnd, '%c/%e/%Y'), 
+        STR_TO_DATE(SubscriptionStart, '%c/%e/%Y')
+    )) AS average_subscription_duration
+FROM 
+    customerdata
+WHERE
+    SubscriptionStart IS NOT NULL
+    AND SubscriptionEnd IS NOT NULL
+    GROUP BY CustomerID;
 
 --find customers with subscriptions longer than 12 months.--
 
