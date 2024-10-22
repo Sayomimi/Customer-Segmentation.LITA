@@ -18,11 +18,13 @@ This project involves:
 ### Pivot Table
 ![Active customers](https://github.com/user-attachments/assets/13d83a43-14f3-475d-9275-02479308f925)
 
-![Canceled subscription](https://github.com/user-attachments/assets/475a1e47-95a9-4f1a-95e4-9ec64aa0beef)
+![Rev_sub_reg](https://github.com/user-attachments/assets/4df5c629-30da-41a2-b521-7dcf82bde8f5)
 
-![Popular sub](https://github.com/user-attachments/assets/a056b4e9-86d8-40ad-8653-5b841b3425cc)
+![Canceled sub](https://github.com/user-attachments/assets/2908732a-0d33-4ecd-93e4-3262723a1b7a)
 
-![Total revenue by region](https://github.com/user-attachments/assets/516dc4bf-c28f-4bf9-bf2c-ad21a5004ad6)
+![Avg_sub](https://github.com/user-attachments/assets/bae20d23-d4fd-4685-b586-662ac2cb6e19)
+
+![Popular sub](https://github.com/user-attachments/assets/3ce1e230-f4a9-4f60-83ac-26e27cbfc4ef)
 
 ![Monthly revenue](https://github.com/user-attachments/assets/f633fe5e-1cba-4b7f-a390-cd79c49b563c)
 
