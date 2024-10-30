@@ -159,6 +159,6 @@ FROM customerdata;
 7. Subscription Duration Analysis: A bar chart that visualizes the number of customers based on their subscription duration, categorizing them by different lengths of time.
 
 8. Year Slicer: Interactive slicer allowing users to filter the dashboard by year (2022 and 2023) for more focused analysis.
+<img width="577" alt="Capstone_Customers" src="https://github.com/user-attachments/assets/62bab31f-3641-42da-a72e-c5399c51e367">
 
 
-<img width="480" alt="Customer Segment Analysis" src="https://github.com/user-attachments/assets/a77174d5-82ce-4c21-b678-591aa926248a">
